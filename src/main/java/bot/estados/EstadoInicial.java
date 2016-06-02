@@ -18,9 +18,9 @@ public class EstadoInicial extends Estado{
     @Override
     public void processaTexto(String texto) {
         
-        
-        
-        
+        Random rand = new Random(new Date().getTime());
+        mensagemResposta = "Oi amigao!  vou sorteei um numero de 0 a 9. tente adivinha-lo!";
+        proximoEstado = new EstadoJogando(rand.nextInt(10), 0);
     }
 
     
